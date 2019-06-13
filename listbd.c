@@ -34,18 +34,19 @@ ListaBid LISTABID_eliminar (ListaBid l) {
 
 int      LISTABID_consultar (ListaBid l) {
 	
+	return 0;
 }
 
 int      LISTABID_vacia (ListaBid l) {
-	
+	return 0;
 }
 
 int      LISTABID_final (ListaBid l) {
-	
+	return 0;
 }
 
 int      LISTABID_principio (ListaBid l) {
-	
+	return 0;
 }
 
 ListaBid LISTABID_irPrincipio (ListaBid l) {
