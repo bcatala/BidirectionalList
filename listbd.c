@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "listbd.h"
 
 ListaBid LISTABID_crea () {
 	
