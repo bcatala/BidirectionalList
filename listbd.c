@@ -160,7 +160,7 @@ int      LISTABID_consultar (ListaBid l) {
 }
 
 int      LISTABID_vacia (ListaBid l) {
-	return 0;
+	return l.pri->sig == l.ult;	
 }
 
 int      LISTABID_final (ListaBid l) {
