@@ -90,6 +90,7 @@ void main(){
 				
 			case 9: 
 				
+				l=LISTABID_destruye (l);
 				
 				break;
 				
