@@ -141,8 +141,22 @@ ListaBid LISTABID_eliminar (ListaBid l) {
 }
 
 int      LISTABID_consultar (ListaBid l) {
+	int e = -1;
+
+	if(LISTABID_vacia (l)){
+		printf("Esta vacia la lista.\n");
+		
+	}else{
 	
-	return 0;
+		if (l.pdi == l.pri->ant || l.pdi == l.ult->sig) {
+			printf("Error, estoy apuntando a un fantasma.\n ");
+		}
+		else {
+			e = l.pdi->e;
+			printf("%d el numero a consultar\n",e);
+		}
+	}
+	return e;
 }
 
 int      LISTABID_vacia (ListaBid l) {
