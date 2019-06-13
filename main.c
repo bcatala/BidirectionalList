@@ -78,11 +78,13 @@ void main(){
 			case 7: 
 			
 			
-			l=LISTABID_eliminar (l);
+				l=LISTABID_eliminar (l);
+				
 				break; 
 				
 			case 8: 
-			
+				
+				l=LISTABID_vaciar (l);
 				
 				break;
 				
