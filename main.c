@@ -71,10 +71,12 @@ void main(){
 				
 			case 6: 
 			
+				l=LISTABID_irFinal (l);
 			
 				break; 
 				
 			case 7: 
+			
 			
 			
 				break; 
@@ -82,10 +84,7 @@ void main(){
 			case 8: 
 			
 				
-				
-			
-					
-				 break;
+				break;
 				
 			case 9: 
 				
