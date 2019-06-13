@@ -6,6 +6,7 @@ void main(){
 	
 	int opcio = 0;
 	ListaBid l;
+	int e;
 		
 	l=LISTABID_crea ();
 	
