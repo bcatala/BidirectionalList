@@ -59,7 +59,8 @@ void main(){
 				
 			case 4: 
 			
-			
+				l=LISTABID_retroceder (l);
+				
 				break; 
 				
 			case 5: 
