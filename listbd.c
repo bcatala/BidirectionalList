@@ -164,7 +164,7 @@ int      LISTABID_vacia (ListaBid l) {
 }
 
 int      LISTABID_final (ListaBid l) {
-	return 0;
+	return l.pdi == l.ult;
 }
 
 int      LISTABID_principio (ListaBid l) {
