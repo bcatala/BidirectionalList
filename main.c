@@ -53,7 +53,7 @@ void main(){
 				
 			case 3: 
 			
-				
+				l=LISTABID_avanzar (l);
 	
 				break; 
 				
