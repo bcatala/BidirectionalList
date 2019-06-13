@@ -47,7 +47,7 @@ void main(){
 			
 			case 2:
 
-				
+				e=LISTABID_consultar (l);
 				
 				break; 
 				
