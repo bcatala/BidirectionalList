@@ -4,6 +4,33 @@
 
 ListaBid LISTABID_crea () {
 	
+	ListaBid l;
+
+	l.pri = NULL;
+	l.pri = (Nodo*) malloc (sizeof(Nodo));
+	
+	if (l.pri == NULL) {
+		printf("Error al pedir memoria para el primer fantasma.\n");
+	}
+	else {
+		l.ult = NULL;
+		l.ult = (Nodo*) malloc (sizeof(Nodo));
+		if (l.ult == NULL) {
+			printf("Error al pedir memoria para el segundo fantasma.\n");
+			free(l.pri);
+		}
+		else {
+			l.pri->sig = l.ult;
+			l.pri->ant = NULL;
+			
+			l.ult->sig = NULL;
+			l.ult->ant = l.pri;
+
+			l.pdi = l.ult;
+		}
+	}
+	
+	
 	return l;
 }
 
