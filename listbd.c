@@ -182,7 +182,9 @@ ListaBid LISTABID_irPrincipio (ListaBid l) {
 
 ListaBid LISTABID_irFinal (ListaBid l) {
 	
-	
+	if(!LISTABID_vacia (l)){
+		l.pdi = l.ult->ant;
+	}
 	return l;
 }
 
