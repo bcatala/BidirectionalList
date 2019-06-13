@@ -173,8 +173,11 @@ int      LISTABID_principio (ListaBid l) {
 
 ListaBid LISTABID_irPrincipio (ListaBid l) {
 	
-	
+	if(!LISTABID_vacia (l)){
+	l.pdi = l.pri->sig;
+	}
 	return l;
+	
 }
 
 ListaBid LISTABID_irFinal (ListaBid l) {
