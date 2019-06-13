@@ -65,10 +65,12 @@ void main(){
 				
 			case 5: 
 				
+				l=LISTABID_irPrincipio (l);
 				
 				break; 
 				
 			case 6: 
+			
 			
 				break; 
 				
