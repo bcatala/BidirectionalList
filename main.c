@@ -6,6 +6,7 @@ void main(){
 	
 	int opcio = 0;
 	ListaBid l;
+	int e;
 		
 	l=LISTABID_crea ();
 	
@@ -37,7 +38,10 @@ void main(){
 			
 			case 1: 
 	         
-			
+				printf("Introdueix un altre valor: ");
+				scanf("\n%d", &e);
+				l=LISTABID_anadirOrdenado (l,e);
+				
 				break; 
 				
 			
