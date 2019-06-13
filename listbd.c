@@ -87,9 +87,34 @@ ListaBid LISTABID_anadirIzquierda (ListaBid l, int e) {
 
 ListaBid LISTABID_anadirOrdenado (ListaBid l, int e) {
 
+
+	int trobat =0;
+	int primer=0;
+	
+	if(LISTABID_vacia (l)){
+		l=LISTABID_anadirIzquierda(l,e);
+		
+	}else{
+	l=LISTABID_irPrincipio (l);
+
+	while (trobat==0){
+			if (l.pdi->e <e && l.pdi->sig!= NULL){
+					l.pdi=l.pdi->sig;
+					primer=1;
+				
+			}else{
+				l=LISTABID_anadirIzquierda(l,e);
+				trobat=1;
+			}
+	
+	}
+	}
+	l=LISTABID_irPrincipio (l);
 	
 	
 	return l;
+	
+	
 }
 
 
