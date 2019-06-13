@@ -208,7 +208,19 @@ ListaBid LISTABID_avanzar (ListaBid l) {
 
 ListaBid LISTABID_retroceder (ListaBid l) {
 	
+	if(!LISTABID_vacia (l)){
+		if (l.pdi->ant->ant == NULL) {
+			printf("Error, estoy en el primer fantasma.\n");
+		}
+		else {
+			l.pdi = l.pdi->ant;
+			printf("Retrocedemos.\n");
+		}
 	
+	}else{
+		printf("Esta vacia la lista.\n");
+		
+	}
 	return l;
 }
 
