@@ -225,8 +225,20 @@ ListaBid LISTABID_retroceder (ListaBid l) {
 }
 
 ListaBid LISTABID_destruye (ListaBid l) {
-	
-	return l;
+	Nodo * aux;
+
+		while (l.pri != NULL) {
+			aux = l.pri;
+			l.pri = l.pri->sig;
+			free(aux);
+		}
+
+		l.pri = NULL;
+		l.ult = NULL;
+		l.pdi = NULL;
+
+		return l;
+
 }
 
 ListaBid LISTABID_vaciar (ListaBid l) {
