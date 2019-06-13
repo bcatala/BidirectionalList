@@ -190,8 +190,20 @@ ListaBid LISTABID_irFinal (ListaBid l) {
 
 ListaBid LISTABID_avanzar (ListaBid l) {
 	
-	
+		if(!LISTABID_vacia (l)){
+		if (l.pdi->sig->sig == NULL) {
+			printf("Error, estoy en el ultimo fantasma.\n");
+		}
+		else {
+			l.pdi = l.pdi->sig;
+			printf("Avanzamos.\n");
+		}
+	}else{
+		printf("Esta vacia la lista.\n");
+		
+	}
 	return l;
+	
 }
 
 ListaBid LISTABID_retroceder (ListaBid l) {
