@@ -78,7 +78,7 @@ void main(){
 			case 7: 
 			
 			
-			
+			l=LISTABID_eliminar (l);
 				break; 
 				
 			case 8: 
