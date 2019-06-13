@@ -5,6 +5,9 @@
 void main(){
 	
 	int opcio = 0;
+	ListaBid l;
+		
+	l=LISTABID_crea ();
 	
 	do{
 		do {
