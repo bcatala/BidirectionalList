@@ -36,7 +36,26 @@ ListaBid LISTABID_crea () {
 
 
 ListaBid LISTABID_anadirDerecha (ListaBid l, int e) {
+	Nodo * aux;
 	
+	if (l.pdi->sig == NULL) {
+		printf("Error estoy en el ultimo fantasma.\n");
+	}
+	else {
+		aux = (Nodo*) malloc (sizeof(Nodo));
+		if (aux == NULL) {
+			printf("Error al pedir memoria.\n");
+		}
+		else {
+			aux->e = e;
+			aux->sig = l.pdi->sig;
+			aux->ant = l.pdi;
+			
+			aux->sig->ant = aux;
+			l.pdi->sig = aux;
+		}
+	}
+
 
 	return l;
 }
