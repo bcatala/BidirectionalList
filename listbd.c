@@ -34,7 +34,6 @@ ListaBid LISTABID_crea () {
 	return l;
 }
 
-
 ListaBid LISTABID_anadirDerecha (ListaBid l, int e) {
 	Nodo * aux;
 	
@@ -119,7 +118,25 @@ ListaBid LISTABID_anadirOrdenado (ListaBid l, int e) {
 
 
 ListaBid LISTABID_eliminar (ListaBid l) {
+	Nodo * aux;
+	if(LISTABID_vacia (l)){
 	
+		printf("Esta vacia la lista.\n");
+		
+	}else{
+		if (l.pdi == l.pri || l.pdi == l.ult) {
+			printf("Error, estoy apuntando a un fantasma.\n");
+		}
+		else {
+			aux = l.pdi;
+
+			l.pdi->ant->sig = l.pdi->sig;
+			l.pdi->sig->ant = l.pdi->ant;
+			l.pdi = l.pdi->sig;
+
+			free(aux);
+		}
+	}
 	return l;
 }
 
