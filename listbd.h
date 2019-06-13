@@ -4,6 +4,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct _nodo {
+	int e;
+	struct _nodo * sig;
+	struct _nodo * ant;
+} Nodo;
+
+typedef struct {
+	Nodo * pri;
+	Nodo * ult;
+	Nodo * pdi;
+} ListaBid;
+
 
 ListaBid LISTABID_crea ();
 ListaBid LISTABID_anadirDerecha (ListaBid l, int e);
