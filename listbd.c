@@ -243,7 +243,14 @@ ListaBid LISTABID_destruye (ListaBid l) {
 
 ListaBid LISTABID_vaciar (ListaBid l) {
 
+	l=LISTABID_irPrincipio (l);
+				
+	while(!LISTABID_vacia (l)){
+					
+		l=LISTABID_eliminar (l);
 	
+	}
+							 
 	
 	return l;
 }
