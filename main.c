@@ -38,7 +38,10 @@ void main(){
 			
 			case 1: 
 	         
-			
+				printf("Introdueix un altre valor: ");
+				scanf("\n%d", &e);
+				l=LISTABID_anadirOrdenado (l,e);
+				
 				break; 
 				
 			
