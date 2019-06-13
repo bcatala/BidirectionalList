@@ -61,7 +61,27 @@ ListaBid LISTABID_anadirDerecha (ListaBid l, int e) {
 }
 
 ListaBid LISTABID_anadirIzquierda (ListaBid l, int e) {
-	
+	Nodo * aux;
+
+	if (l.pdi->ant == NULL) {
+		printf("Error, no puedo añadir a la izquierda del primer fantasma.\n");
+	}
+	else {
+		aux = (Nodo*) malloc (sizeof(Nodo));
+		if (aux == NULL) {
+			printf("Error al pedir memoria.\n");
+		}
+		else {
+			aux->e = e;
+			aux->sig = l.pdi;
+			aux->ant = l.pdi->ant;
+
+			aux->ant->sig = aux;
+			
+
+			l.pdi->ant = aux;
+		}
+	}
 	return l;
 }
 
