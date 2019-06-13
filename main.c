@@ -4,6 +4,8 @@
 
 void main(){
 	
+	int opcio = 0;
+	
 	do{
 		do {
 		
