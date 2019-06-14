@@ -4,19 +4,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//L'estructura dels nodes
 typedef struct _nodo {
 	int e;
 	struct _nodo * sig;
 	struct _nodo * ant;
 } Nodo;
 
+//L'estructura de la llista
 typedef struct {
 	Nodo * pri;
 	Nodo * ult;
 	Nodo * pdi;
 } ListaBid;
 
-
+//Les capçaleres de les funcions del lista.c
 ListaBid LISTABID_crea ();
 ListaBid LISTABID_anadirDerecha (ListaBid l, int e);
 ListaBid LISTABID_anadirIzquierda (ListaBid l, int e);
