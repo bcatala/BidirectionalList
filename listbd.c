@@ -2,6 +2,14 @@
 #include <string.h>
 #include "listbd.h"
 
+
+/***********************************************
+*
+* @Finalitat:Crear la llita
+* @Parametres:void
+* @Retorn:ListaBid
+*
+************************************************/
 ListaBid LISTABID_crea () {
 	
 	ListaBid l;
@@ -34,6 +42,16 @@ ListaBid LISTABID_crea () {
 	return l;
 }
 
+
+/***********************************************
+*
+* @Finalitat:Afagir node a la llista per la dreta
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista
+*			  in:e- el nombre a afegir a la llista 
+* @Retorn:ListaBid
+*
+************************************************/
 ListaBid LISTABID_anadirDerecha (ListaBid l, int e) {
 	Nodo * aux;
 	
@@ -59,6 +77,16 @@ ListaBid LISTABID_anadirDerecha (ListaBid l, int e) {
 	return l;
 }
 
+
+/***********************************************
+*
+* @Finalitat:Afagir node a la llista per la esquerra
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista
+*			  in:e- el nombre a afegir a la llista 
+* @Retorn:ListaBid
+*
+************************************************/
 ListaBid LISTABID_anadirIzquierda (ListaBid l, int e) {
 	Nodo * aux;
 
@@ -84,6 +112,16 @@ ListaBid LISTABID_anadirIzquierda (ListaBid l, int e) {
 	return l;
 }
 
+
+/***********************************************
+*
+* @Finalitat:Afagir node a la llista de forma ordenada
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista
+*			  in:e- el nombre a afegir a la llista 
+* @Retorn:ListaBid
+*
+************************************************/
 ListaBid LISTABID_anadirOrdenado (ListaBid l, int e) {
 
 
@@ -117,6 +155,14 @@ ListaBid LISTABID_anadirOrdenado (ListaBid l, int e) {
 }
 
 
+/***********************************************
+*
+* @Finalitat:Eliminar node de la llista 
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:ListaBid
+*
+************************************************/
 ListaBid LISTABID_eliminar (ListaBid l) {
 	Nodo * aux;
 	if(LISTABID_vacia (l)){
@@ -140,6 +186,15 @@ ListaBid LISTABID_eliminar (ListaBid l) {
 	return l;
 }
 
+
+/***********************************************
+*
+* @Finalitat:Consultar valor del node de la llista 
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:int, el valor del element a consultar
+*
+************************************************/
 int      LISTABID_consultar (ListaBid l) {
 	int e = -1;
 
@@ -159,18 +214,50 @@ int      LISTABID_consultar (ListaBid l) {
 	return e;
 }
 
+/***********************************************
+*
+* @Finalitat:Comprobar si la llista esta buida 
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:int, 1 si esta buida, 0 si no
+*
+************************************************/
 int      LISTABID_vacia (ListaBid l) {
 	return l.pri->sig == l.ult;	
 }
 
+/***********************************************
+*
+* @Finalitat:Comprobar si estem al final de la llista
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:int, 1 si esta al final, 0 si no
+*
+************************************************/
 int      LISTABID_final (ListaBid l) {
 	return l.pdi == l.ult;
 }
 
+/***********************************************
+*
+* @Finalitat:Comprobar si estem al inici de la llista
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:int, 1 si esta al inici, 0 si no
+*
+************************************************/
 int      LISTABID_principio (ListaBid l) {
 	return l.pdi == l.pri;
 }
 
+/***********************************************
+*
+* @Finalitat:Et mou fins l'inici de la llista
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:ListaBid, la llista actualitzada
+*
+************************************************/
 ListaBid LISTABID_irPrincipio (ListaBid l) {
 	
 	if(!LISTABID_vacia (l)){
@@ -180,6 +267,14 @@ ListaBid LISTABID_irPrincipio (ListaBid l) {
 	
 }
 
+/***********************************************
+*
+* @Finalitat:Et mou fins el final de la llista
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:ListaBid, la llista actualitzada
+*
+************************************************/
 ListaBid LISTABID_irFinal (ListaBid l) {
 	
 	if(!LISTABID_vacia (l)){
@@ -188,6 +283,15 @@ ListaBid LISTABID_irFinal (ListaBid l) {
 	return l;
 }
 
+/***********************************************
+*
+* @Finalitat:Et mou un element cap a la dreta dins 
+				de la llista
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:ListaBid, la llista actualitzada
+*
+************************************************/
 ListaBid LISTABID_avanzar (ListaBid l) {
 	
 		if(!LISTABID_vacia (l)){
@@ -206,6 +310,15 @@ ListaBid LISTABID_avanzar (ListaBid l) {
 	
 }
 
+/***********************************************
+*
+* @Finalitat:Et mou un element cap a l'esquerra dins 
+				de la llista
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:ListaBid, la llista actualitzada
+*
+************************************************/
 ListaBid LISTABID_retroceder (ListaBid l) {
 	
 	if(!LISTABID_vacia (l)){
@@ -224,6 +337,14 @@ ListaBid LISTABID_retroceder (ListaBid l) {
 	return l;
 }
 
+/***********************************************
+*
+* @Finalitat:Elimina la llista
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:ListaBid, la llista actualitzada
+*
+************************************************/
 ListaBid LISTABID_destruye (ListaBid l) {
 	Nodo * aux;
 
@@ -241,6 +362,14 @@ ListaBid LISTABID_destruye (ListaBid l) {
 
 }
 
+/***********************************************
+*
+* @Finalitat:Buida tots els elements de la llista excepte els fantasmes
+* @Parametres:in:struct ListaBid, estructura on es
+*					  guarda la llista 
+* @Retorn:ListaBid, la llista actualitzada
+*
+************************************************/
 ListaBid LISTABID_vaciar (ListaBid l) {
 
 	l=LISTABID_irPrincipio (l);
